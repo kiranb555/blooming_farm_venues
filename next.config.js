@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: '/blooming_farm_fe', // Replace with your repository name
   images: {
+    unoptimized: true, // Required for static exports
     remotePatterns: [
       {
         protocol: 'https',
