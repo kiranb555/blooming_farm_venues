@@ -8,58 +8,58 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const sliderImages = [
-  // Wedding Events
-  // {
-  //   src: "https://images.unsplash.com/photo-1606894039964-58496bb463ae?ixlib=rb-4.0.3",
-  //   alt: "Elegant outdoor wedding setup in farm setting",
-  //   title: "Elegant Farm Weddings",
-  //   subtitle: "Traditional mandap setups in natural farm settings"
-  // },
   {
-    src: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3",
-    alt: "Bride and Groom in Farm",
-    title: "Romantic Farm Settings",
-    subtitle: "Capture your special moments in nature's lap"
-  },
-  // Haldi Celebrations
-  {
-    src: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3",
-    alt: "Farm Haldi Ceremony",
-    title: "Vibrant Haldi Functions",
-    subtitle: "Celebrate with turmeric and flowers in open air"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-4.0.3",
+    src: "https://images.unsplash.com/photo-1741441033653-aaea80f10c1a?q=80&w=1673&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Colorful Haldi Celebration",
     title: "Haldi on the Farm",
     subtitle: "Traditional ceremonies surrounded by nature"
   },
+  {
+    src: "https://images.unsplash.com/photo-1685524482347-b81b4ebfa400?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Outdoor wedding ceremony in farm setting",
+    title: "Farm Wedding",
+    subtitle: "Perfect blend of nature and celebration"
+  },
+  {
+    // src: "https://images.unsplash.com/photo-1670211589390-a1bc427fc204?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+   src:"https://images.unsplash.com/photo-1670211589390-a1bc427fc204",
+    alt: "Gender Reveal Party",
+    title: "Gender Reveal Party",
+    subtitle: "Unwrap the surprise with a gender reveal party"
+  },
   // Birthday Parties
   {
-    src: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3",
+    // src: "https://images.unsplash.com/photo-1598845243320-c43cf5fd4af9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src:"https://plus.unsplash.com/premium_photo-1692912319629-ba546cfaa546?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Farm Birthday Party",
     title: "Farm Birthday Celebrations",
     subtitle: "Unforgettable birthday parties in natural settings"
   },
   {
-    src: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3",
+    src: "https://images.unsplash.com/photo-1717205963725-e2a7ac8f23ea?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Kids Birthday on Farm",
-    title: "Kids' Farm Parties",
+    title: "Kid's Farm Parties",
     subtitle: "Fun-filled celebrations with farm animals and activities"
   },
-  // Plant Nursery
   {
-    src: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3",
-    alt: "Farm Plant Nursery",
-    title: "Plant Nursery",
-    subtitle: "Discover our collection of farm-fresh plants and saplings"
+    src: "https://images.unsplash.com/photo-1758270703824-a6565c6a33a8?q=80&w=2231&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Graduation Party",
+    title: "Graduation Party",
+    subtitle: "Celebrate with friends and family in a natural setting"
   },
-  {
-    src: "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-4.0.3",
-    alt: "Organic Farm Produce",
-    title: "Fresh Farm Produce",
-    subtitle: "Locally grown, organic plants and seeds"
-  }
+  // Plant Nursery
+  // {
+  //   src: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3",
+  //   alt: "Farm Plant Nursery - coming soon",
+  //   title: "Plant Nursery",
+  //   subtitle: "Discover our collection of farm-fresh plants and saplings"
+  // },
+  // {
+  //   src: "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-4.0.3",
+  //   alt: "Organic Farm Produce",
+  //   title: "Fresh Farm Produce",
+  //   subtitle: "Locally grown, organic plants and seeds"
+  // },
 ];
 
 export default function Slider() {

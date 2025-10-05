@@ -3,10 +3,8 @@
 import React, { useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import L from "leaflet";
 import { Icon } from "leaflet";
 
-// Custom icon for the venue
 const venueIcon = new Icon({
   iconUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png",
   iconSize: [25, 41],
@@ -17,13 +15,11 @@ const venueIcon = new Icon({
 });
 
 export default function Locate() {
-  // Store the map instance
   const mapRef = useRef(null);
 
-  // Coordinates for your venue (example coordinates, please update with your actual venue coordinates)
   const venueLocation = {
-    lat: 35.4685016, // Nashville coordinates (example)
-    lng: -80.5940399
+    lat: 35.4542331,
+    lng: -80.745409
   };
 
   const resetMap = (map) => {

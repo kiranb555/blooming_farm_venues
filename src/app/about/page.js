@@ -14,6 +14,30 @@ const services = [
     icon: "💒",
   },
   {
+    title: "Haldi Functions",
+    description:
+      "Vibrant and colorful Haldi ceremonies in a natural, open-air farm setting.",
+    icon: "🌼",
+  },
+  {
+    title: "Graduation Parties",
+    description:
+      "Celebrate academic achievements with a memorable outdoor graduation party.",
+    icon: "🎓",
+  },
+  {
+    title: "Birthday Celebrations",
+    description:
+      "Fun-filled birthday parties with plenty of space for games and entertainment.",
+    icon: "🎉",
+  },
+  {
+    title: "Gender Reveal Parties",
+    description:
+      "Create unforgettable memories with a beautiful farm backdrop for your special reveal.",
+    icon: "👶",
+  },
+  {
     title: "Corporate Events",
     description:
       "Unique outdoor spaces for corporate retreats, team building, and company celebrations.",
@@ -58,7 +82,7 @@ export default function AboutPage() {
             <h2 className="text-base text-green-600 font-semibold tracking-wide uppercase">
               About Us
             </h2>
-            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl">
               Welcome to Blooming Farms
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">

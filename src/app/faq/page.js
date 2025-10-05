@@ -13,12 +13,12 @@ const faqs = [
       answer: "Our venue can comfortably accommodate up to 200 guests for seated events and up to 300 for standing receptions. For more intimate gatherings, we have smaller spaces available as well."
     },
     {
-      question: "Do you provide tables, chairs, and linens?",
-      answer: "Yes, we provide basic event furniture including tables, chairs, and basic white linens. We can also recommend rental companies for any additional items you might need to match your event's theme."
+      question: "What furniture is included with the venue rental?",
+      answer: "We provide 10-15 round tables and 100-150 chairs as part of the venue rental. For additional furniture needs or specific linens, we can recommend trusted local rental companies."
     },
     {
       question: "Is there on-site parking available?",
-      answer: "Yes, we have ample free parking space for all your guests. We also have designated areas for accessible parking and can arrange for valet services upon request."
+      answer: "Yes, we have on-site parking available for 40-60 vehicles. We also have designated areas for accessible parking. For larger events, we can recommend nearby overflow parking options."
     },
     {
       question: "Can we bring in our own caterer?",
@@ -42,7 +42,11 @@ const faqs = [
     },
     {
       question: "Do you offer on-site accommodations?",
-      answer: "While we don't have on-site lodging, we're happy to provide a list of nearby hotels, bed and breakfasts, and other accommodations that our guests have enjoyed. Some offer special rates for our event clients."
+      answer: "Yes, we have a charming on-site home available that can accommodate 6-9 guests for the night of your event. For additional lodging needs, we're happy to provide a list of nearby hotels, bed and breakfasts, and other accommodations that our guests have enjoyed."
+    },
+    {
+      question: "Still have questions?",
+      answer: "Contact us at info@bloomfarmvenues.com or call us at (800) 400-8667"
     }
   ];
 

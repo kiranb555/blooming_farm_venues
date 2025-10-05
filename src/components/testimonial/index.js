@@ -9,20 +9,27 @@ import Image from "next/image";
 const testimonials = [
   {
     id: 1,
+    name: "Rahul Sharma",
+    role: "Groom's Father",
+    content: "Blooming Farms made our son's Haldi ceremony magical. Perfect setting, perfect execution!",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    id: 2,
     name: "Sarah Johnson",
     role: "Wedding Planner",
     content: "The perfect venue for our clients' special day. The team was incredibly professional and the space was stunning!",
     image: "https://randomuser.me/api/portraits/women/44.jpg"
   },
   {
-    id: 2,
+    id: 3,
     name: "Michael Chen",
     role: "Corporate Event Manager",
     content: "Exceptional service and beautiful grounds. Our corporate retreat was a huge success thanks to this venue.",
     image: "https://randomuser.me/api/portraits/men/32.jpg"
   },
   {
-    id: 3,
+    id: 4,
     name: "Emily Rodriguez",
     role: "Birthday Party Host",
     content: "A magical setting that made my daughter's birthday unforgettable. Highly recommended!",

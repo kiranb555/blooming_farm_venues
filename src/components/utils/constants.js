@@ -4,7 +4,7 @@ export const EMAIL = 'contact@bloomingfarms.com';
 export const ADDRESS = 'Concord, NC 28027';
 export const SOCIAL_MEDIA = {
     INSTAGRAM: 'https://www.instagram.com/bloomingfarmsvenue/',
-    FACEBOOK: 'https://www.facebook.com/bloomingfarmsvenue/',
+    FACEBOOK: 'https://www.facebook.com/people/Blooming-Farms-Venue/61573805087553/',
     YOUTUBE: 'https://www.youtube.com/c/bloomingfarmsvenue/',
     TWITTER: 'https://twitter.com/bloomingfarmsvenue',
     LINKEDIN: 'https://www.linkedin.com/company/bloomingfarmsvenue/',
