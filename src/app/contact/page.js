@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from 'react';
 import { 
   PhoneIcon, 
   EnvelopeIcon, 
@@ -16,14 +17,64 @@ import { motion } from 'framer-motion';
 import { PHONE, EMAIL, SOCIAL_MEDIA, FORMATED_PHONE, ADDRESS } from '@/components/utils/constants';
 
 export default function ContactPage() {
-  const socialLinks = {
-    instagram: "https://instagram.com/yourfarm",
-    youtube: "https://youtube.com/yourfarm",
-    whatsapp: `https://wa.me/1${PHONE}?text=Hello%20Bloom%20Farm%20Venues!`
-  };
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
 
   const handleCall = () => {
     window.location.href = `tel:${PHONE}`;
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus({ type: '', message: '' });
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({ 
+          type: 'success', 
+          message: 'Message sent successfully! We will get back to you soon.' 
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setSubmitStatus({ 
+          type: 'error', 
+          message: data.message || 'Failed to send message. Please try again.' 
+        });
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus({ 
+        type: 'error', 
+        message: 'An error occurred. Please try again later.' 
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const socialButtons = [
@@ -103,10 +154,9 @@ export default function ContactPage() {
             <h3 className="text-xl font-semibold text-gray-800 mb-2">Email Us</h3>
             <p className="text-gray-600 break-all">{EMAIL}</p>
           </motion.a>
-
           {/* Address */}
           <motion.a
-            href="https://maps.google.com"
+            href="https://maps.google.com/maps/dir/35.4542331,-80.745409"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 block"
@@ -155,7 +205,22 @@ export default function ContactPage() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <h2 className="text-2xl font-semibold text-center text-gray-800 mb-8">Send Us a Message</h2>
-          <form className="space-y-6">
+          
+          {submitStatus.message && (
+            <motion.div
+              className={`mb-6 p-4 rounded-lg ${
+                submitStatus.type === 'success'
+                  ? 'bg-green-50 border border-green-200 text-green-800'
+                  : 'bg-red-50 border border-red-200 text-red-800'
+              }`}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              {submitStatus.message}
+            </motion.div>
+          )}
+
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
@@ -163,8 +228,11 @@ export default function ContactPage() {
                   type="text"
                   id="name"
                   name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
+                  disabled={isSubmitting}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
                   placeholder="Your name"
                 />
               </div>
@@ -174,8 +242,11 @@ export default function ContactPage() {
                   type="email"
                   id="email"
                   name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
+                  disabled={isSubmitting}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -186,8 +257,11 @@ export default function ContactPage() {
                 type="text"
                 id="subject"
                 name="subject"
+                value={formData.subject}
+                onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
+                disabled={isSubmitting}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
                 placeholder="How can we help?"
               />
             </div>
@@ -196,18 +270,22 @@ export default function ContactPage() {
               <textarea
                 id="message"
                 name="message"
+                value={formData.message}
+                onChange={handleChange}
                 rows="4"
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
+                disabled={isSubmitting}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
                 placeholder="Your message here..."
               ></textarea>
             </div>
             <div className="text-center">
               <button
                 type="submit"
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors duration-300"
+                disabled={isSubmitting}
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors duration-300 disabled:bg-gray-400 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
                 <svg className="ml-2 -mr-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>

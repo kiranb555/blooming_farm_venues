@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { Icon } from "leaflet";
 
@@ -13,6 +14,24 @@ const venueIcon = new Icon({
   shadowUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-shadow.png",
   shadowSize: [41, 41]
 });
+
+// Create a custom icon with text label
+const createLabelIcon = () => {
+  return L.divIcon({
+    html: `
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+        <img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png" style="width: 25px; height: 41px;" />
+        <div style="background-color: white; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); white-space: nowrap;">
+          Blooming Farm Venues
+        </div>
+      </div>
+    `,
+    iconSize: [120, 70],
+    iconAnchor: [60, 70],
+    popupAnchor: [0, -70],
+    className: 'custom-label-icon'
+  });
+};
 
 export default function Locate() {
   const mapRef = useRef(null);
@@ -79,11 +98,22 @@ export default function Locate() {
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={venueLocation} icon={venueIcon}>
+            <Marker position={venueLocation} icon={createLabelIcon()}>
               <Popup>
                 <div className="text-center">
                   <h3 className="font-bold mb-2">Blooming Farm Venues</h3>
-                  <p className="text-gray-600">Your Event Destination</p>
+                  <div className="flex items-center justify-center gap-2 mb-3">
+                    <p className="text-gray-600 text-sm">Your Event Destination</p>
+                    <a
+                      href={`https://www.google.com/maps/dir/?api=1&destination=${venueLocation.lat},${venueLocation.lng}&travelmode=driving`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-2 py-1 bg-green-600 text-xs rounded hover:bg-green-700 transition-colors font-semibold"
+                      style={{ color: 'white' }}
+                    >
+                      Directions
+                    </a>
+                  </div>
                 </div>
               </Popup>
             </Marker>

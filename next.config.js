@@ -1,12 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  basePath: '/blooming_farm_fe', // Replace with your repository name
   eslint: {
     ignoreDuringBuilds: true,
   },
   images: {
-    unoptimized: true, // Required for static exports
     remotePatterns: [
       {
         protocol: 'https',
@@ -15,6 +12,14 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'plus.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'a0.muscache.com',
       },
     ],
   },

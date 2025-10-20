@@ -213,7 +213,7 @@ export default function PricingPage() {
                       tier.popular ? "ring-2 ring-green-500" : ""
                     }`}
                   >
-                    <div className="p-8">
+                    <div className="sm:p-2 lg:p-8">
                       <div className="flex justify-between items-start">
                         <div>
                           <h3 className="text-2xl font-bold text-gray-900">

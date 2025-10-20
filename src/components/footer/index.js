@@ -12,7 +12,7 @@ const footerNavigation = {
   ],
   secondary: [
     { name: "About us", href: "/about" },
-    { name: "Blog", href: "/blog" },
+    // { name: "Blog", href: "/blog" },
     { name: "Privacy Policy", href: "/policy" },
     { name: "Terms & Conditions", href: "/terms" }
   ]
