@@ -1,5 +1,6 @@
 "use client";
 
+import { ADDRESS, EMAIL, PHONE } from "@/components/utils/constants";
 import { motion } from "framer-motion";
 
 export default function Terms() {
@@ -132,9 +133,9 @@ export default function Terms() {
                 If you have any questions about these Terms, please contact us at:
               </p>
               <p className="mt-2 text-gray-800 font-medium">
-                Email: info@bloomfarmvenues.com<br />
-                Phone: (800) 400-8667<br />
-                Address: 123 Farm Road, Countryside, CA 90210
+                Email: <a href={`mailto:${EMAIL}`}>{EMAIL}</a><br />
+                Phone: <a href={`tel:${PHONE}`}>{PHONE}</a><br />
+                Address: {ADDRESS}
               </p>
             </motion.section>
           </div>

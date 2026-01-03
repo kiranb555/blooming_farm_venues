@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { EMAIL, FORMATED_PHONE, PHONE } from "@/components/utils/constants";
 
 const faqs = [
     {
@@ -18,7 +19,7 @@ const faqs = [
     },
     {
       question: "Is there on-site parking available?",
-      answer: "Yes, we have on-site parking available for 40-60 vehicles. We also have designated areas for accessible parking. For larger events, we can recommend nearby overflow parking options."
+      answer: "Yes, we have on-site parking available for 70 vehicles. We also have designated areas for accessible parking. For larger events, we can recommend nearby overflow parking options."
     },
     {
       question: "Can we bring in our own caterer?",
@@ -46,7 +47,7 @@ const faqs = [
     },
     {
       question: "Still have questions?",
-      answer: "Contact us at info@bloomfarmvenues.com or call us at (800) 400-8667"
+      answer:  `Contact us at ${EMAIL} or call us at (800) 400-8667`
     }
   ];
 
@@ -133,12 +134,12 @@ export default function FAQPage() {
           <h3 className="text-lg font-medium text-gray-900">Still have questions?</h3>
           <p className="mt-2 text-gray-600">
             Contact us at{" "}
-            <a href="mailto:info@bloomfarmvenues.com" className="text-green-600 hover:text-green-500">
-              info@bloomfarmvenues.com
+            <a href={`mailto:${EMAIL}`} className="text-green-600 hover:text-green-500">
+              {EMAIL}
             </a>{" "}
             or call us at{" "}
-            <a href="tel:8004008667" className="text-green-600 hover:text-green-500">
-              (800) 400-8667
+            <a href={`tel:${PHONE}`} className="text-green-600 hover:text-green-500">
+              {FORMATED_PHONE}
             </a>
           </p>
         </div>

@@ -18,15 +18,15 @@ const Logo = ({
   }
 
   const sizeClasses = {
-    sm: 'h-8 w-8',
-    md: 'h-12 w-12',
-    lg: 'h-16 w-16',
+    sm: 'h-6 w-6 md:h-8 md:w-8',
+    md: 'h-8 w-8 md:h-12 md:w-12',
+    lg: 'h-12 w-12 md:h-16 md:w-16',
   };
 
   const textSizes = {
-    sm: 'text-lg',
-    md: 'text-2xl',
-    lg: 'text-4xl',
+    sm: 'text-base md:text-xl',
+    md: 'text-xl md:text-xl',
+    lg: 'text-2xl md:text-2xl',
   };
 
   const logo = (
@@ -43,9 +43,9 @@ const Logo = ({
         <path d="M256 208c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32z" />
       </svg>
       {withText && (
-        <span className={`ml-3 font-bold ${textColor} ${textSizes[size]} leading-tight`}>
-          Blooming Farms
-          <span className={`block ${textSecondaryColor} text-sm font-normal`}>Venue</span>
+        <span className={`ml-3 font-bold ${textColor} ${textSizes[size]} leading-tight md:leading-snug`}>
+          Blooming Farms Venue
+          {/* <span className={`block ${textSecondaryColor} text-sm font-normal`}>Venue</span> */}
         </span>
       )}
     </div>

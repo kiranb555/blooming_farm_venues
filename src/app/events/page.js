@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FaImages, FaCalendarAlt, FaMapMarkerAlt, FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import EventVideos from "./EventVideos";
+import { FaCalendarAlt, FaMapMarkerAlt, FaTimes, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Events from "./events.json";
 
 const actualVenue = [
   "https://a0.muscache.com/im/pictures/prohost-api/Hosting-43942379/original/a23ddcf8-955d-4132-96d7-92af1db38047.jpeg?im_w=1440",
@@ -26,50 +26,9 @@ const actualVenue = [
   "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NDM5NDIzNzk=/original/80afe816-ce04-4ded-b972-f9ff7b7921f3.jpeg?im_w=1440",
 ];
 
-const events = [
-  {
-    id: 1,
-    title: "Wedding Celebration",
-    date: "June 15, 2025",
-    location: "Blooming Farm",
-    description: "A beautiful outdoor wedding ceremony followed by reception under the stars.",
-    videos: [
-      { id: "dQw4w9WgXcQ", title: "Wedding Highlights" },
-      { id: "9bZkp7q19f0", title: "Bride & Groom First Dance" },
-      { id: "JGwWNGJdvx8", title: "Reception Highlights" }
-    ],
-    images: actualVenue.slice(0, 5), // Use first 5 venue images for wedding
-    tags: ["Wedding", "Outdoor", "Reception"]
-  },
-  {
-    id: 2,
-    title: "Corporate Retreat 2025",
-    date: "May 28, 2025",
-    location: "Blooming Farm",
-    description: "Annual corporate team building and strategy sessions in a serene farm setting.",
-    videos: [
-      { id: "dQw4w9WgXcQ", title: "Team Building Activities" },
-      { id: "9bZkp7q19f0", title: "Strategy Sessions" },
-      { id: "JGwWNGJdvx8", title: "Awards and Recognition" }
-    ],
-    images: actualVenue.slice(3, 8), // Use different set of venue images for corporate
-    tags: ["Corporate", "Team Building", "Conference"]
-  },
-  {
-    id: 3,
-    title: "Birthday Bash",
-    date: "April 10, 2025",
-    location: "Blooming Farm",
-    description: "A fun-filled birthday celebration with friends and family by the lake.",
-    videos: [
-      { id: "dQw4w9WgXcQ", title: "Birthday Wishes" },
-      { id: "9bZkp7q19f0", title: "Cake Cutting Ceremony" },
-      { id: "JGwWNGJdvx8", title: "Birthday Party Highlights" }
-    ],
-    images: actualVenue.slice(1, 6), // Use another set of venue images for birthday
-    tags: ["Birthday", "Family", "Celebration"]
-  }
-];
+// console.log({ Events });
+const events = Events?.events || [];
+console.log({ events });
 
 export default function EventsPage() {
   const [selectedEvent, setSelectedEvent] = useState(events[0]);
@@ -185,7 +144,7 @@ export default function EventsPage() {
             >
               <div className="relative h-48">
                 <Image
-                  src={event.images[0]}
+                  src={`/recentevents/recent_${event.id}.jpeg`}
                   alt={event.title}
                   fill
                   className="object-cover"

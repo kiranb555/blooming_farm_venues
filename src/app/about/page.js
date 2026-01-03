@@ -115,13 +115,13 @@ export default function AboutPage() {
                   Our Founder
                 </h2>
                 <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                  Meet Sarah Johnson
+                    Venkat
                 </h3>
                 <p className="mt-4 text-lg text-gray-500">
                   With over 15 years of experience in hospitality and a deep
-                  love for nature, Sarah founded Blooming Farms with a vision to
+                  love for nature, Venkat founded Blooming Farms with a vision to
                   create a space where people could connect with nature while
-                  celebrating life's important moments. Her dedication to
+                  celebrating life's important moments. His dedication to
                   sustainability and community has made Blooming Farms a beloved
                   destination for events of all kinds.
                 </p>
@@ -144,7 +144,7 @@ export default function AboutPage() {
                     </div>
                     <footer className="mt-4">
                       <p className="text-base font-semibold text-green-600">
-                        Sarah Johnson
+                        Venkat
                       </p>
                       <p className="text-base text-gray-500">Founder & CEO</p>
                     </footer>

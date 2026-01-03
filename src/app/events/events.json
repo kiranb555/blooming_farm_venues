@@ -1,0 +1,36 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Haldi Celebration",
+      "date": "October 18, 2025",
+      "location": "Blooming Farm",
+      "description": "A vibrant and colorful Haldi ceremony with traditional rituals, turmeric paste, and joyful celebrations.",
+      "tags": ["Wedding", "Outdoor", "Haldi"]
+    },
+    {
+      "id": 2,
+      "title": "Reception",
+      "date": "July 03, 2025",
+      "location": "Blooming Farm",
+      "description": "An elegant wedding reception with fine dining, music, and dancing under the stars in our beautiful farm setting.",
+      "tags": ["Wedding", "Outdoor", "Reception"]
+    },
+    {
+      "id": 3,
+      "title": "Wedding Celebration",
+      "date": "October 02, 2025",
+      "location": "Blooming Farm",
+      "description": "A fun-filled Mehandi celebration with friends and family.",
+      "tags": ["Outdoor", "Wedding", "Mehandi"]
+    },
+    {
+      "id": 4,
+      "title": "Birthday Bash",
+      "date": "January 05, 2026",
+      "location": "Blooming Farm",
+      "description": "A fun-filled birthday celebration with friends and family by the lake, featuring games, music, and delicious food.",
+      "tags": ["Outdoor", "Birthday"]
+    }
+  ]
+}

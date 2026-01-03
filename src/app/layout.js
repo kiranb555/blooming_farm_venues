@@ -20,7 +20,7 @@ export const metadata = {
   icons: {
     icon: '/favicon.ico',
   },
-  title: "Blooming Farms",
+  title: "Blooming Farms Venue",
   description: "Premium venues for unforgettable events",
 };
 
