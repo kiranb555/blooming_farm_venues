@@ -101,7 +101,7 @@ export default function AboutPage() {
           <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
             <div className="relative h-64 md:h-96 lg:relative lg:min-h-[400px]">
               <Image
-                src="/founder.jpg"
+                src={`${process.env.NODE_ENV === 'production' ? '/blooming_farm_venues' : ''}/founder.jpg`}
                 alt="Founder"
                 width={500}
                 height={600}
