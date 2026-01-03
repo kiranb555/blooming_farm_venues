@@ -30,16 +30,16 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-gradient-to-r from-green-700 to-emerald-700 shadow-lg">
+    <header className="bg-gradient-to-r from-green-500 to-emerald-500 shadow-lg">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
             <Logo 
-              className="text-white hover:opacity-90 transition-opacity" 
+              className="text-gray-900 hover:opacity-90 transition-opacity" 
               size="md" 
-              iconColor="text-white"
-              textColor="text-white"
+              iconColor="text-gray-100"
+              textColor="text-gray-900"
               textSecondaryColor="text-emerald-100"
               darkMode={true}
             />
@@ -55,8 +55,8 @@ export default function Header() {
                   href={item.href}
                   className={`text-sm font-medium transition-colors ${
                     active 
-                      ? 'text-white border-b-2 border-white' 
-                      : 'text-emerald-100 hover:text-white'
+                      ? 'text-gray-900 border-b-2 border-gray-900' 
+                      : 'text-gray-800 hover:text-gray-900'
                   } pb-1`}
                 >
                   {item.name}
