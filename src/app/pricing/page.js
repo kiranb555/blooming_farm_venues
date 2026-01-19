@@ -182,7 +182,7 @@ export default function PricingPage() {
             <div className="inline-flex rounded-md shadow-sm">
               <button
                 onClick={() => setSelectedTab("hourly")}
-                className={`px-6 py-3 text-sm font-medium rounded-l-lg ${
+                className={`px-6 py-3 text-sm font-medium rounded-l-lg cursor-pointer ${
                   selectedTab === "hourly"
                     ? "bg-green-600 text-white"
                     : "bg-white text-gray-700 hover:bg-gray-50"
@@ -192,7 +192,7 @@ export default function PricingPage() {
               </button>
               <button
                 onClick={() => setSelectedTab("packages")}
-                className={`px-6 py-3 text-sm font-medium rounded-r-lg ${
+                className={`px-6 py-3 text-sm font-medium rounded-r-lg cursor-pointer ${
                   selectedTab === "packages"
                     ? "bg-green-600 text-white"
                     : "bg-white text-gray-700 hover:bg-gray-50"
