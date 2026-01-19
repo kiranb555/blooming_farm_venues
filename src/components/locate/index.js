@@ -21,7 +21,7 @@ const createLabelIcon = () => {
     html: `
       <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
         <img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png" style="width: 25px; height: 41px;" />
-        <div style="background-color: white; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); white-space: nowrap;">
+        <div style="background-color: white; padding: 4px 8px; border-radius: 4px; font-weight: bold; font-size: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); white-space: nowrap; color: #111827;">
           Blooming Farm Venues
         </div>
       </div>

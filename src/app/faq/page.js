@@ -7,15 +7,15 @@ import { EMAIL, FORMATED_PHONE, PHONE } from "@/components/utils/constants";
 const faqs = [
     {
       question: "What types of events can be hosted at your farm venue?",
-      answer: "Our farm venue is perfect for weddings, corporate events, family reunions, birthday parties, and photography sessions. We offer both indoor and outdoor spaces to accommodate various event types and sizes."
+      answer: "Our farm venue is perfect for weddings, corporate events, family reunions, birthday parties, quinceañera, gender reveal parties, graduation parties, sweet 16 parties, and photography sessions. We offer both indoor and outdoor spaces to accommodate various event types and sizes."
     },
     {
       question: "What is the maximum capacity of your venue?",
-      answer: "Our venue can comfortably accommodate up to 200 guests for seated events and up to 300 for standing receptions. For more intimate gatherings, we have smaller spaces available as well."
+      answer: "Our venue accommodates up to 200 guests for seated events and 300 for standing receptions."
     },
     {
       question: "What furniture is included with the venue rental?",
-      answer: "We provide 10-15 round tables and 100-150 chairs as part of the venue rental. For additional furniture needs or specific linens, we can recommend trusted local rental companies."
+      answer: "We provide up to 20 round tables and 200 chairs for your use, the final quantity provided is based on your specific requirements and confirmed guest count."
     },
     {
       question: "Is there on-site parking available?",
@@ -23,15 +23,15 @@ const faqs = [
     },
     {
       question: "Can we bring in our own caterer?",
-      answer: "We have a list of preferred caterers who are familiar with our venue, but you're welcome to bring in your own licensed and insured caterer. All outside caterers must provide proof of insurance and meet our kitchen requirements."
+      answer: "Yes! We invite you to bring in a caterer of your choice to personalize your event. As we do not provide in-house food services, you'll have full control over your menu selection."
     },
     {
       question: "What is your alcohol policy?",
-      answer: "Alcohol is permitted but must be served by our licensed bartenders. We offer bar packages or you can provide your own alcohol with our bartending service. All alcohol service must comply with state laws."
+      answer: "Alcohol service is permitted via our licensed bartenders. To comply with state ABC spirit laws, guests serving hard liquor must secure a Limited Special Occasion Permit prior to the event. All alcohol service must comply with state laws."
     },
     {
       question: "Do you have a noise ordinance?",
-      answer: "Yes, outdoor music must end by 10:00 PM on weekdays and 11:00 PM on weekends to comply with local noise ordinances. Indoor events can continue later with adjusted sound levels."
+      answer: "Yes, outdoor music must end by 11:00 PM to comply with local noise ordinances. Indoor events can continue later with adjusted sound levels."
     },
     {
       question: "What is your cancellation policy?",
@@ -39,15 +39,15 @@ const faqs = [
     },
     {
       question: "Is the venue accessible for guests with disabilities?",
-      answer: "Yes, our venue is fully accessible with ramps, accessible restrooms, and designated parking. Please let us know about any specific accessibility needs when you book."
+      answer: "We strive to accommodate all guests. While the main stage is fully accessible, some of our secondary rooms have limited accessibility. Please let us know your requirements when booking so we can ensure you have a seamless experience."
     },
     {
       question: "Do you offer on-site accommodations?",
-      answer: "Yes, we have a charming on-site home available that can accommodate 6-9 guests for the night of your event. For additional lodging needs, we're happy to provide a list of nearby hotels, bed and breakfasts, and other accommodations that our guests have enjoyed."
+      answer: "Yes, we have a charming on-site home available that can accommodate 6-9 guests for the night of your event."
     },
     {
       question: "Still have questions?",
-      answer:  `Contact us at ${EMAIL} or call us at (800) 400-8667`
+      answer:  `Contact us at ${EMAIL} or call us at ${FORMATED_PHONE}`
     }
   ];
 

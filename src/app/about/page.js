@@ -82,7 +82,7 @@ export default function AboutPage() {
             <h2 className="text-base text-green-600 font-semibold tracking-wide uppercase">
               About Us
             </h2>
-            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl">
+            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl text-gray-900">
               Welcome to Blooming Farms
             </p>
             <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">

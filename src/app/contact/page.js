@@ -12,7 +12,7 @@ import {
   PhoneIcon as SolidPhoneIcon,
   ChatBubbleBottomCenterTextIcon as SolidChatIcon
 } from '@heroicons/react/24/solid';
-import { FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaInstagram, FaYoutube, FaFacebookF  } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { PHONE, EMAIL, SOCIAL_MEDIA, FORMATED_PHONE, ADDRESS } from '@/components/utils/constants';
 
@@ -83,6 +83,12 @@ export default function ContactPage() {
       label: "Instagram",
       url: SOCIAL_MEDIA.INSTAGRAM,
       color: "bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700"
+    },
+    { 
+      icon: <FaFacebookF className="w-8 h-8" />,
+      label: "Facebook",
+      url: SOCIAL_MEDIA.FACEBOOK,
+      color: "bg-[#1877F2] hover:bg-[#166FE5]"
     },
     { 
       icon: <FaYoutube className="w-8 h-8" />,
@@ -232,7 +238,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed text-gray-800 placeholder-gray-400"
                   placeholder="Your name"
                 />
               </div>
@@ -246,7 +252,7 @@ export default function ContactPage() {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed text-gray-800 placeholder-gray-400"
                   placeholder="your.email@example.com"
                 />
               </div>
@@ -261,7 +267,7 @@ export default function ContactPage() {
                 onChange={handleChange}
                 required
                 disabled={isSubmitting}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed text-gray-800 placeholder-gray-400"
                 placeholder="How can we help?"
               />
             </div>
@@ -275,7 +281,7 @@ export default function ContactPage() {
                 rows="4"
                 required
                 disabled={isSubmitting}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed text-gray-800 placeholder-gray-400"
                 placeholder="Your message here..."
               ></textarea>
             </div>

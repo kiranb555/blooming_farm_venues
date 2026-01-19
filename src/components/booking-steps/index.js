@@ -19,7 +19,7 @@ const steps = [
   {
     number: 3,
     title: "Payment",
-    description: "Make secure payment to confirm your booking",
+    description: "Confirm your booking with a 50% secure deposit",
     icon: <CreditCardIcon className="w-5 h-5" />,
   },
 ];

@@ -71,7 +71,8 @@ const pricingTiers = [
         slots: [
           {
             name: "Full Day",
-            hours: "9:00 AM - Next Day 9:00 AM (24 hours)",
+            hours: "3:00 PM - 11:00 PM (8 hours event + overnight accommodation until 11:00 AM next day)",
+            // hours: "9:00 AM - Next Day 9:00 AM (24 hours)",
             // price: "$1250",
             note: "Includes overnight accommodation",
           },
@@ -118,7 +119,7 @@ const eventTypes = [
 ];
 
 const whatsIncluded = [
-  "Basic setup (tables & chairs)",
+  // "Basic setup (tables & chairs)",
   "Standard lighting arrangements",
   "Access to restrooms",
   "Parking space",
