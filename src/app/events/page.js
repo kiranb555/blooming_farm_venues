@@ -144,7 +144,7 @@ export default function EventsPage() {
             >
               <div className="relative h-48">
                 <Image
-                  src={`${process.env.NODE_ENV === 'production' ? '/blooming_farm_venues' : ''}/recentevents/recent_${event.id}.jpeg`}
+                  src={`/recentevents/recent_${event.id}.jpeg`}
                   alt={event.title}
                   fill
                   className="object-cover"
