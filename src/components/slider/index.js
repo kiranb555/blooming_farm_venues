@@ -9,12 +9,6 @@ import { motion } from "framer-motion";
 
 const sliderImages = [
   {
-    src: "https://images.unsplash.com/photo-1741441033653-aaea80f10c1a?q=80&w=1673&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    alt: "Colorful Haldi Celebration",
-    title: "Haldi on the Farm",
-    subtitle: "Traditional ceremonies surrounded by nature"
-  },
-  {
     src: "https://images.unsplash.com/photo-1685524482347-b81b4ebfa400?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Outdoor wedding ceremony in farm setting",
     title: "Farm Wedding",
@@ -47,6 +41,12 @@ const sliderImages = [
     title: "Graduation Party",
     subtitle: "Celebrate with friends and family in a natural setting"
   },
+  {
+    src: "https://images.unsplash.com/photo-1741441033653-aaea80f10c1a?q=80&w=1673&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Colorful Haldi Celebration",
+    title: "Haldi on the Farm",
+    subtitle: "Traditional ceremonies surrounded by nature"
+  }
   // Plant Nursery
   // {
   //   src: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?ixlib=rb-4.0.3",

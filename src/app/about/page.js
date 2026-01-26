@@ -98,7 +98,7 @@ export default function AboutPage() {
       {/* Founder Section */}
       <div className="py-16 rounded-2xl shadow-xl overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+          {/* <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center"> */}
             {/* <div className="relative h-64 md:h-96 lg:relative lg:min-h-[400px]">
               <Image
                 src={`${process.env.NODE_ENV === 'production' ? '/blooming_farm_venues' : ''}/founder.jpg`}
@@ -109,7 +109,7 @@ export default function AboutPage() {
                 priority
               />
             </div> */}
-            <div className="mt-10 lg:mt-0">
+            <div className="mt-10 lg:mt-0 items-center">
               <div className="text-base max-w-prose lg:max-w-none">
                 <h2 className="text-base text-green-600 font-semibold tracking-wide uppercase">
                   Our Founder
@@ -152,7 +152,7 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-          </div>
+          {/* </div> */}
         </div>
       </div>
 
