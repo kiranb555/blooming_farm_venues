@@ -99,7 +99,7 @@ export default function AboutPage() {
       <div className="py-16 rounded-2xl shadow-xl overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-            <div className="relative h-64 md:h-96 lg:relative lg:min-h-[400px]">
+            {/* <div className="relative h-64 md:h-96 lg:relative lg:min-h-[400px]">
               <Image
                 src={`${process.env.NODE_ENV === 'production' ? '/blooming_farm_venues' : ''}/founder.jpg`}
                 alt="Founder"
@@ -108,7 +108,7 @@ export default function AboutPage() {
                 className="rounded-lg shadow-xl object-cover"
                 priority
               />
-            </div>
+            </div> */}
             <div className="mt-10 lg:mt-0">
               <div className="text-base max-w-prose lg:max-w-none">
                 <h2 className="text-base text-green-600 font-semibold tracking-wide uppercase">

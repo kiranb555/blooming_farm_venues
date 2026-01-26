@@ -37,8 +37,8 @@ export default function Locate() {
   const mapRef = useRef(null);
 
   const venueLocation = {
-    lat: 35.4542331,
-    lng: -80.745409
+    lat: 35.4538721,
+    lng: -80.7494701
   };
 
   const resetMap = (map) => {
