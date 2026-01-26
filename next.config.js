@@ -1,12 +1,11 @@
 /** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === 'production';
-const repoName = 'blooming_farm_venues'; // Replace with your repository name
+const repoName = 'blooming_farm_venues';
 
 const nextConfig = {
-  // Add basePath for GitHub Pages
-  basePath: isProd ? `/${repoName}` : '',
-  assetPrefix: isProd ? `/${repoName}/` : '',
-  
+  // GitHub Pages configuration
+  basePath: isProd && process.env.DEPLOY_ENV !== 'AMPLIFY' ? `/${repoName}` : '',
+  assetPrefix: isProd && process.env.DEPLOY_ENV !== 'AMPLIFY' ? `/${repoName}/` : '',
   eslint: {
     ignoreDuringBuilds: true,
   },
