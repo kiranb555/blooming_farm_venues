@@ -162,7 +162,7 @@ export default function ContactPage() {
           </motion.a>
           {/* Address */}
           <motion.a
-            href="https://maps.google.com/maps/dir/35.4542331,-80.745409"
+            href="https://maps.google.com/maps/dir//35.4538863,-80.7449327"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 block"

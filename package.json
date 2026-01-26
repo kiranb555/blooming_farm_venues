@@ -5,11 +5,13 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "postbuild": "node scripts/generate-sitemap.js",
     "start": "next start",
     "lint": "next lint",
     "export": "next build && next export -o out",
     "predeploy": "npm run build && npm run export",
-    "deploy": "gh-pages -d out"
+    "deploy": "gh-pages -d out",
+    "sitemap": "node scripts/generate-sitemap.js"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -19,6 +21,7 @@
     "leaflet": "^1.9.4",
     "mapbox-gl": "^3.13.0",
     "next": "15.4.2",
+    "next-seo": "^7.0.1",
     "nodemailer": "^6.9.7",
     "react": "19.1.0",
     "react-dom": "19.1.0",
@@ -26,6 +29,7 @@
     "react-intersection-observer": "^9.16.0",
     "react-leaflet": "^5.0.0",
     "react-map-gl": "^8.0.4",
+    "sitemap": "^9.0.0",
     "swiper": "^11.2.10"
   },
   "devDependencies": {

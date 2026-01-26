@@ -1,0 +1,13 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+Sitemap: https://www.bloomingfarmsvenue.com/sitemap.xml
+
+# Disallow crawling of next.js internal and API routes
+Disallow: /_next/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /_error
+Disallow: /404
+Disallow: /500

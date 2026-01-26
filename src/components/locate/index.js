@@ -5,6 +5,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { Icon } from "leaflet";
+import { LATTITUDE, LONGITUDE } from "../utils/constants";
 
 const venueIcon = new Icon({
   iconUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png",
@@ -37,8 +38,8 @@ export default function Locate() {
   const mapRef = useRef(null);
 
   const venueLocation = {
-    lat: 35.4538721,
-    lng: -80.7494701
+    lat: LATTITUDE,
+    lng: LONGITUDE
   };
 
   const resetMap = (map) => {

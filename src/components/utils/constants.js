@@ -10,3 +10,6 @@ export const SOCIAL_MEDIA = {
     LINKEDIN: 'https://www.linkedin.com/company/bloomingfarmsvenue/',
     WHATSAPP: `https://wa.me/1${PHONE}?text=Hello%20Bloom%20Farm%20Venues!`
 };  
+
+export const LATTITUDE = 35.4538863;
+export const LONGITUDE = -80.7449327;
