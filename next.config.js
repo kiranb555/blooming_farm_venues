@@ -6,6 +6,51 @@ const nextConfig = {
   // GitHub Pages configuration
   basePath: isProd && process.env.DEPLOY_ENV !== 'AMPLIFY' ? `/${repoName}` : '',
   assetPrefix: isProd && process.env.DEPLOY_ENV !== 'AMPLIFY' ? `/${repoName}/` : '',
+  // Add custom headers for optimized caching
+  async headers() {
+    return [
+      // Cache static assets for 1 year (they get hashed in production)
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      // Cache images and fonts for 1 month
+      {
+        source: '/(.*).(jpg|jpeg|png|webp|svg|gif|ico|woff|woff2|ttf|eot)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=2592000, must-revalidate',
+          },
+        ],
+      },
+      // Cache CSS and JS for 1 week
+      {
+        source: '/(.*).(css|js)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=604800, must-revalidate',
+          },
+        ],
+      },
+      // Default cache for HTML pages (no cache)
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, must-revalidate',
+          },
+        ],
+      },
+    ];
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
