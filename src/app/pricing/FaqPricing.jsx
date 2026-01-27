@@ -13,7 +13,7 @@ const FaqPricing = () => {
         </h3>
         <p className="mt-2 text-gray-600">
           The rental fee includes the venue space, basic furniture setup,
-          standard lighting, restroom access, and on-site staff
+          standard lighting, restroom access, Parking space, and on-site staff
           assistance.
         </p>
       </div>
@@ -22,8 +22,7 @@ const FaqPricing = () => {
           Do you require a deposit?
         </h3>
         <p className="mt-2 text-gray-600">
-          Yes, we require a 30% deposit to secure your booking, with the
-          remaining balance due 14 days before the event.
+          Yes, we require a 50% deposit to secure your booking.
         </p>
       </div>
       <div>
