@@ -33,7 +33,7 @@ const sliderImages = [
     src: "https://images.unsplash.com/photo-1717205963725-e2a7ac8f23ea?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Kids Birthday on Farm",
     title: "Kid's Farm Parties",
-    subtitle: "Fun-filled celebrations with farm animals and activities"
+    subtitle: "Exciting indoor games and a dedicated kids play area in a beautiful farm setting"
   },
   {
     src: "https://images.unsplash.com/photo-1758270703824-a6565c6a33a8?q=80&w=2231&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",

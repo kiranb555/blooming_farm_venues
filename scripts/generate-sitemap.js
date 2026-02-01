@@ -3,12 +3,19 @@ const { Readable } = require('stream');
 const fs = require('fs');
 const path = require('path');
 
-// Add all your routes here
+// Define all your routes with their priority and change frequency
 const routes = [
-  { url: '/', changefreq: 'daily', priority: 1.0 },
-  { url: '/about', changefreq: 'monthly', priority: 0.8 },
-  { url: '/contact', changefreq: 'monthly', priority: 0.8 },
-  // Add more routes as needed
+  { url: '/', changefreq: 'daily', priority: 1.0, lastmod: new Date().toISOString() },
+  { url: '/about', changefreq: 'monthly', priority: 0.8, lastmod: new Date().toISOString() },
+  { url: '/contact', changefreq: 'weekly', priority: 0.9, lastmod: new Date().toISOString() },
+  { url: '/gallery', changefreq: 'weekly', priority: 0.7, lastmod: new Date().toISOString() },
+  { url: '/events', changefreq: 'weekly', priority: 0.8, lastmod: new Date().toISOString() },
+  { url: '/pricing', changefreq: 'monthly', priority: 0.7, lastmod: new Date().toISOString() },
+  { url: '/testimonials', changefreq: 'monthly', priority: 0.6, lastmod: new Date().toISOString() },
+  { url: '/faq', changefreq: 'monthly', priority: 0.6, lastmod: new Date().toISOString() },
+  { url: '/blog', changefreq: 'daily', priority: 0.8, lastmod: new Date().toISOString() },
+  { url: '/privacy-policy', changefreq: 'yearly', priority: 0.3, lastmod: new Date().toISOString() },
+  { url: '/terms-of-service', changefreq: 'yearly', priority: 0.3, lastmod: new Date().toISOString() }
 ];
 
 async function generateSitemap() {

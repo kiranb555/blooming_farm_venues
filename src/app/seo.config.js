@@ -1,22 +1,29 @@
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bloomingfarmsvenue.com/';
 
 const defaultSEO = {
-  title: 'Blooming Farm Venues - Beautiful Event Spaces',
+  title: 'Blooming Farm Venues | Premier Wedding & Event Venue',
   titleTemplate: '%s | Blooming Farm Venues',
-  description: 'Discover beautiful farm venues for your next event. Perfect for weddings, corporate events, and special occasions in a serene farm setting.',
+  description: 'Stunning farm wedding venue and event center in a picturesque setting. Perfect for weddings, receptions, corporate events, and special celebrations. Experience the perfect blend of rustic charm and modern amenities.',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: siteUrl,
     site_name: 'Blooming Farm Venues',
+    title: 'Blooming Farm Venues | Premier Wedding & Event Venue',
+    description: 'Stunning farm wedding venue and event center in a picturesque setting. Perfect for weddings, receptions, and special celebrations.',
     images: [
       {
         url: `${siteUrl}/images/og-image.jpg`,
+        secureUrl: `${siteUrl}/images/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: 'Blooming Farm Venues',
+        alt: 'Blooming Farm Venues - Premier Wedding & Event Venue',
+        type: 'image/jpeg',
       },
     ],
+    site_name: 'Blooming Farm Venues',
+    locale: 'en_US',
+    type: 'website',
   },
   twitter: {
     handle: '@bloomingfarms',
@@ -34,7 +41,15 @@ const defaultSEO = {
     },
     {
       name: 'keywords',
-      content: 'farm venues, event spaces, wedding venues, corporate events, outdoor events, farm weddings, rustic venues, charlotte farm, charlotte wedding venues, charlotte wedding venue, charlotte wedding venue, charlotte wedding venue, charlotte wedding venue, charlotte farm stay',
+      content: 'wedding venue, venue, farm wedding, farm event, event center, function, rustic wedding, barn wedding, outdoor wedding, reception venue, party venue, event space, wedding location, farm stay, countryside venue, rustic venue, event planning, wedding planning, charlotte wedding venues, rustic barn venue, outdoor event space, wedding reception, ceremony venue, special events, corporate events, social gatherings, celebration venue, unique wedding venues, elegant farm venue',
+    },
+    {
+      name: 'description',
+      content: 'Premier farm wedding venue and event center offering a picturesque setting for weddings, receptions, and special functions. Experience the perfect blend of rustic charm and modern amenities at our beautiful farm venue.',
+    },
+    {
+      property: 'og:description',
+      content: 'Discover our stunning farm venue, perfect for weddings, corporate events, and special celebrations. A beautiful blend of rustic charm and modern facilities in a serene setting.',
     },
   ],
   additionalLinkTags: [
