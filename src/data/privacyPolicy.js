@@ -18,7 +18,8 @@ export const privacyPolicyData = {
       items: [
         'Contact details (name, email, phone)',
         'Event information and preferences',
-        'Payment and billing information'
+        'Payment and billing information',
+        'Phone numbers for SMS notifications (only with explicit consent)'
       ]
     },
     {
@@ -28,7 +29,8 @@ export const privacyPolicyData = {
       items: [
         'Process bookings and payments',
         'Communicate about your event',
-        'Improve our services'
+        'Improve our services',
+        'Send SMS notifications about events and updates (only with explicit consent)'
       ]
     },
     {
@@ -39,12 +41,27 @@ export const privacyPolicyData = {
         'We do not collect or store personal information from casual visitors to our website',
         'If you contact us through our website, we only use your information to respond to your inquiry',
         'We do not use cookies or tracking technologies that collect personal data',
-        'You can browse our website anonymously without providing any personal information'
+        'You can browse our website anonymously without providing any personal information',
+        'We do not share your opt-in information for SMS with third parties',
+        'No mobile opt-in or text message consent will be shared with third parties or affiliates',
+        // 'You can opt-out of SMS communications at any time by replying STOP to any SMS message'
+      ]
+    },
+    {
+      id: 'sms-communications',
+      title: '4. SMS Communications',
+      description: 'If you opt-in to receive SMS notifications:',
+      items: [
+        'Reply STOP to opt-out at any time',
+        'Reply HELP for support',
+        'Message and data rates may apply',
+        // 'Messaging frequency may vary',
+        'We obtain explicit consent before sending SMS'
       ]
     },
     {
       id: 'contact-us',
-      title: '4. Contact Us',
+      title: '5. Contact Us',
       description: 'For privacy-related questions or requests, contact us at:',
       contactInfo: {
         email: EMAIL,

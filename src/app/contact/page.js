@@ -21,7 +21,9 @@ export default function ContactPage() {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
+    phone: '',
+    smsOptIn: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
@@ -31,10 +33,10 @@ export default function ContactPage() {
   };
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: type === 'checkbox' ? checked : value
     }));
   };
 
@@ -59,7 +61,7 @@ export default function ContactPage() {
           type: 'success', 
           message: 'Message sent successfully! We will get back to you soon.' 
         });
-        setFormData({ name: '', email: '', subject: '', message: '' });
+        setFormData({ name: '', email: '', subject: '', message: '', phone: '', smsOptIn: false });
       } else {
         setSubmitStatus({ 
           type: 'error', 
@@ -272,6 +274,19 @@ export default function ContactPage() {
               />
             </div>
             <div>
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone (optional)</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                disabled={isSubmitting}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed text-gray-800 placeholder-gray-400"
+                placeholder="(123) 456-7890"
+              />
+            </div>
+            <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
               <textarea
                 id="message"
@@ -284,6 +299,22 @@ export default function ContactPage() {
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors disabled:bg-gray-100 disabled:cursor-not-allowed text-gray-800 placeholder-gray-400"
                 placeholder="Your message here..."
               ></textarea>
+            </div>
+            <div>
+              <label className="flex items-center">
+                <input
+                  type="checkbox"
+                  name="smsOptIn"
+                  checked={formData.smsOptIn}
+                  onChange={handleChange}
+                  disabled={isSubmitting}
+                  className="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded"
+                />
+                <span className="ml-2 text-sm text-gray-700">
+                  I agree to receive SMS updates about events and promotions. Message and data rates may apply. Reply STOP to opt-out. 
+                  <a href="/policy" className="text-green-600 hover:text-green-700 underline">View Privacy Policy</a>
+                </span>
+              </label>
             </div>
             <div className="text-center">
               <button
