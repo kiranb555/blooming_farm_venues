@@ -3,9 +3,14 @@ import nodemailer from 'nodemailer';
 // https://myaccount.google.com/apppasswords 
 // TO genetate app password we can use above link
 
+// Temporary hardcoded values for testing - replace with env vars in production
+const EMAIL_USER = 'kiran.basavaraj05@gmail.com'; // Replace with your Gmail
+const EMAIL_PASSWORD = 'cril oykl ubxs npcp'; // Replace with Gmail app password
+const ADMIN_EMAIL = 'kiranb2040@gmail.com'; // Replace with admin email
+
 export async function POST(request) {
   try {
-    const { name, email, subject, message } = await request.json();
+    const { name, email, subject, message, phone, smsOptIn } = await request.json();
 
     // Validate required fields
     if (!name || !email || !subject || !message) {
@@ -15,25 +20,65 @@ export async function POST(request) {
       );
     }
 
+    // Check environment variables
+    if (!EMAIL_USER || !EMAIL_PASSWORD || !ADMIN_EMAIL) {
+      console.error('Missing email constants');
+      return new Response(
+        JSON.stringify({ message: 'Server configuration error' }),
+        { status: 500, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
     // Create transporter
-    const transporter = nodemailer.createTransport({ 
-      service: 'gmail',
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD
-      },
-    });
+    let transporter;
+    if (process.env.NODE_ENV === 'production') {
+      // Use Gmail in production
+      transporter = nodemailer.createTransport({ 
+        service: 'gmail',
+        auth: {
+          user: EMAIL_USER,
+          pass: EMAIL_PASSWORD
+        },
+        pool: true,
+        maxConnections: 1,
+        maxMessages: 1,
+      });
+    } else {
+      // Use Ethereal for local testing (faster and no real emails)
+      const testAccount = await nodemailer.createTestAccount();
+      transporter = nodemailer.createTransport({
+        host: 'smtp.ethereal.email',
+        port: 587,
+        secure: false,
+        auth: {
+          user: testAccount.user,
+          pass: testAccount.pass,
+        },
+      });
+      console.log('📧 Using Ethereal for local testing. Check emails at:', nodemailer.getTestMessageUrl(testAccount));
+    }
+
+    // Verify transporter (optional, for debugging)
+    try {
+      await transporter.verify();
+      console.log('✅ Transporter verified');
+    } catch (error) {
+      console.error('❌ Transporter verification failed:', error.message);
+      throw error;
+    }
 
     // Email to admin
     const adminMailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.ADMIN_EMAIL,
+      from: EMAIL_USER,
+      to: ADMIN_EMAIL,
       subject: `New Contact Request Submited: ${subject}`,
       html: `
         <h2>New Contact for enquiry</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
+        ${phone ? `<p><strong>Phone:</strong> ${phone}</p>` : ''}
         <p><strong>Subject:</strong> ${subject}</p>
+        <p><strong>SMS Opt-in:</strong> ${smsOptIn ? 'Yes' : 'No'}</p>
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
       `,
@@ -41,7 +86,7 @@ export async function POST(request) {
 
     // Email to user (confirmation)
     const userMailOptions = {
-      from: process.env.EMAIL_USER,
+      from: EMAIL_USER,
       to: email,
       subject: 'We received your message - Blooming Farm Venues',
       html: `
@@ -73,6 +118,7 @@ export async function POST(request) {
     );
   } catch (error) {
     console.error('❌ Email sending error:', error.message);
+    console.error('Full error:', error);
     return new Response(
       JSON.stringify({ 
         message: 'Failed to send message. Please try again later.' 
