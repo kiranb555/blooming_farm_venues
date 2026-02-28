@@ -4,8 +4,8 @@ import nodemailer from 'nodemailer';
 // TO genetate app password we can use above link
 
 // Temporary hardcoded values for testing - replace with env vars in production
-const EMAIL_USER = 'nhpartyrentals@gmail.com'; // Replace with your Gmail
-const EMAIL_PASSWORD = 'xkzv rnmi iodp jgea'; // Replace with Gmail app password
+const EMAIL_USER = 'kiran.basavaraj05@gmail.com'; // Replace with your Gmail
+const EMAIL_PASSWORD = 'cril oykl ubxs npcp'; // Replace with Gmail app password
 const ADMIN_EMAIL = 'kiranb2040@gmail.com'; // Replace with admin email
 
 export async function POST(request) {
