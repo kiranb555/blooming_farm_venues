@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+// import Image from "next/image";
 
 // Replace with your actual founder image
-import founderImage from "../../../public/founder.jpg";
+// import founderImage from "../../../public/founder.jpg";
 
 const services = [
   {
