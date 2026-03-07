@@ -284,7 +284,7 @@ export default function PricingPage() {
                       </div>
                       <div className="mt-8">
                         <h4 className="font-semibold text-gray-800 mb-3">
-                          What's Included:
+                          What&apos;s Included:
                         </h4>
                         <ul className="space-y-3">
                           {tier.features.map((feature, i) => (
@@ -316,7 +316,7 @@ export default function PricingPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-4">
-                      What's Included in All Packages
+                      What&apos;s Included in All Packages
                     </h4>
                     <ul className="space-y-3">
                       {whatsIncluded.map((item, index) => (

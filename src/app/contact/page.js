@@ -123,7 +123,7 @@ export default function ContactPage() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h1>
-          <p className="text-xl text-gray-600">We'd love to hear from you</p>
+          <p className="text-xl text-gray-600">We&apos;d love to hear from you</p>
         </div>
 
         {/* Phone Number Section */}

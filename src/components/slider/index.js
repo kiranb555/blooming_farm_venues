@@ -8,8 +8,15 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const sliderImages = [
+  // {
+  //   src: "https://images.unsplash.com/photo-1685524482347-b81b4ebfa400?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  //   alt: "Outdoor wedding ceremony in farm setting",
+  //   title: "Farm Wedding",
+  //   subtitle: "Perfect blend of nature and celebration"
+  // },
   {
-    src: "https://images.unsplash.com/photo-1685524482347-b81b4ebfa400?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    // src: "https://images.unsplash.com/photo-1570782342304-9766e5dc9d05?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    src:"https://plus.unsplash.com/premium_photo-1681841695231-d674aa32f65b?q=80&w=2043&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Outdoor wedding ceremony in farm setting",
     title: "Farm Wedding",
     subtitle: "Perfect blend of nature and celebration"
