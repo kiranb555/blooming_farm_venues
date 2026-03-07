@@ -82,7 +82,7 @@ export default function Testimonial() {
                     </div>
                   </div>
                   <p className="text-gray-600 text-sm leading-relaxed">
-                    "{testimonial.content}"
+                    &quot;{testimonial.content}&quot;
                   </p>
                 </div>
               </SwiperSlide>

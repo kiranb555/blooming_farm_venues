@@ -1,12 +1,12 @@
 import nodemailer from 'nodemailer';
 
 // https://myaccount.google.com/apppasswords 
-// TO genetate app password we can use above link
+// TO generate app password we can use above link
 
 // Temporary hardcoded values for testing - replace with env vars in production
-const EMAIL_USER = 'nhpartyrentals@gmail.com'; // Replace with your Gmail
-const EMAIL_PASSWORD = 'xkzv rnmi iodp jgea'; // Replace with Gmail app password
-const ADMIN_EMAIL = 'kiranb2040@gmail.com'; // Replace with admin email
+const EMAIL_USER = process.env.EMAIL_USER || 'nhpartyrentals@gmail.com'; // Replace with your Gmail
+const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD || 'xkzv rnmi iodp jgea'; // Replace with Gmail app password
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'kiranb2040@gmail.com'; // Replace with admin email
 
 export async function POST(request) {
   try {

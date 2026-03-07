@@ -46,8 +46,8 @@ export default function BlogPage() {
             </h1>
             
             <p className="text-lg text-gray-600 mb-8">
-              Choosing the perfect venue is one of the most important decisions you'll make when planning your event. 
-              To help you make an informed choice, we've compiled a comprehensive list of questions to ask before signing any contracts.
+              Choosing the perfect venue is one of the most important decisions you&apos;ll make when planning your event. 
+              To help you make an informed choice, we&apos;ve compiled a comprehensive list of questions to ask before signing any contracts.
             </p>
             
             <div className="prose prose-lg max-w-none">
@@ -74,7 +74,7 @@ export default function BlogPage() {
                   <span className="font-medium">Pro Tip:</span>
                 </div>
                 <p className="text-gray-600">
-                  Always verify the venue's capacity for both seated and standing arrangements. 
+                  Always verify the venue&apos;s capacity for both seated and standing arrangements. 
                   A space that fits 200 standing might only accommodate 120 seated with tables.
                 </p>
               </div>
@@ -168,7 +168,7 @@ export default function BlogPage() {
               <div className="bg-green-50 p-6 rounded-lg mt-12">
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Ready to Tour Our Venue?</h3>
                 <p className="text-gray-700 mb-4">
-                  Now that you know what to ask, we'd love to show you around Blooming Farm Venues. 
+                  Now that you know what to ask, we&apos;d love to show you around Blooming Farm Venues. 
                   Contact us today to schedule a tour and see how our space can bring your event vision to life.
                 </p>
                 <a

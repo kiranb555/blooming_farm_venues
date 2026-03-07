@@ -83,7 +83,7 @@ export default function EventsPage() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [lightboxOpen]);
+  }, [lightboxOpen, navigate]);
 
   const VenueGallery = () => (
     <div className="mt-16">
